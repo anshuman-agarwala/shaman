@@ -116,7 +116,6 @@ def init_model():
 
     """
     conf.sqlalchemy_w.engine = _engine_from_config(conf.sqlalchemy_w)
-    conf.sqlalchemy_ro.engine = _engine_from_config(conf.sqlalchemy_ro)
     if 'sqlite' in dict(conf)['sqlalchemy_w']['url']:
         event.listen(Pool, 'connect', sqlite_connect, named=True)
 
@@ -139,8 +138,9 @@ def start():
 
 
 def start_read_only():
-    Session.bind = conf.sqlalchemy_ro.engine
-    metadata.bind = conf.sqlalchemy_ro.engine
+    pass
+    #Session.bind = conf.sqlalchemy_ro.engine
+    #metadata.bind = conf.sqlalchemy_ro.engine
 
 
 def commit():

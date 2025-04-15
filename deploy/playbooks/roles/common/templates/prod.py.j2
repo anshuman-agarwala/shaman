@@ -8,7 +8,7 @@ import sys, os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from pecan.hooks import TransactionHook, RequestViewerHook
 from shaman import models
-from prod_db import sqlalchemy_w, sqlalchemy_ro
+from prod_db import sqlalchemy_w
 from prod_api_creds import api_key, api_user
 
 

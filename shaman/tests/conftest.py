@@ -72,7 +72,6 @@ def config(db_url):
     configuration.set_config(dict())
     config_ = configuration.conf_from_file(config_file())
     config_.sqlalchemy_w.url = db_url
-    config_.sqlalchemy_ro.url = db_url
     configuration.set_config(
         config_.to_dict(),
         overwrite=True,

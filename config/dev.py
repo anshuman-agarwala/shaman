@@ -66,14 +66,6 @@ sqlalchemy_w = {
     'encoding':      'utf-8'
 }
 
-sqlalchemy_ro = {
-    'url': 'sqlite:///dev.db',
-    'echo':          True,
-    'echo_pool':     True,
-    'pool_recycle':  3600,
-    'encoding':      'utf-8'
-}
-
 # Basic HTTP Auth credentials
 api_user = 'admin'
 api_key = 'secret'

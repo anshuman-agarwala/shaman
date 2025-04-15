@@ -7,11 +7,3 @@ sqlalchemy_w = {
     'pool_recycle':  3600,
     'encoding':      'utf-8'
 }
-
-sqlalchemy_ro = {
-    'url': 'postgresql+psycopg2://{{ app_name }}:{{ postgresql_app_user_password }}@{{ standby_ip }}/{{ app_name }}',
-    'echo':          False,
-    'echo_pool':     False,
-    'pool_recycle':  3600,
-    'encoding':      'utf-8'
-}
